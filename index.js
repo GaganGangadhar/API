@@ -13,6 +13,8 @@ app.get('/', async (req, res) => {
     res.render('index.ejs', {
       content: facts.text,
       type: facts.type,
+      createdAt: facts.createdAt,
+      updatedAt: facts.updatedAt,
     })
   } catch (error) {
     console.log(error.response.data)
